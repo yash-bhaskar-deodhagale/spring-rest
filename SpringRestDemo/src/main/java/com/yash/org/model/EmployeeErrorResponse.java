@@ -39,9 +39,9 @@ public class EmployeeErrorResponse {
 		return timeStamp;
 	}
 
-	public void setTimeStamp(long timeStamp) {
+	/*public void setTimeStamp(long timeStamp) {
 		this.timeStamp = timeStamp;
-	}
+	}*/
 
 	@Override
 	public String toString() {

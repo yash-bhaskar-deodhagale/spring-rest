@@ -19,6 +19,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public List<Employee> getAllEmployees() {
 		Session session=sessionFactory.getCurrentSession();
+		@SuppressWarnings("unchecked")
 		Query<Employee> query=session.createQuery("from Employee");
 		return query.getResultList();
 	}
@@ -45,6 +46,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public void deleteEmployee(int empId) {
 		Session session=sessionFactory.getCurrentSession();
+		@SuppressWarnings("rawtypes")
 		Query deletequery=session.createQuery("delete from Employee where empId=:empId");
 		deletequery.setParameter("empId", empId);
 		deletequery.executeUpdate();
